@@ -112,9 +112,9 @@
 
     <section class="w-11/12 max-w-[768px] mx-auto mt-10">
       <div class="w-full mb-4">
-        <h1 class="text-4xl font-bold border-b-[1.5px] border-[#e5e7eb] pb-4">
+        <h2 class="text-4xl font-bold border-b-[1.5px] border-[#e5e7eb] pb-4">
           Front-end developer test project
-        </h1>
+        </h2>
         <!-- <div class="block w-full h-[10px] bg-[#e5e7eb] "></div> -->
       </div>
       <p class="text-sm leading-6">
@@ -124,28 +124,26 @@
       </p>
     </section>
 
-    <section class="w-11/12 max-w-[768px] mx-auto mt-10">
-      <div class="flex items-center gap-3">
-        <div class="w-5 -translate-y-1.5">
-          <svg class="text-input-color" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </div>
-
-        <h2 class="text-3xl font-bold">This is my header</h2>
+    <section class="w-11/12 max-w-[768px] mx-auto mt-6">
+      <div class="h1-div-container flex flex-col gap-2">
       </div>
 
       <div class="w-full">
         <textarea
+        id="editor-input"
         autofocus
         placeholder="Type/for blocks, @ to link docs or people"
-        class="w-full h-96 p-2 bg-transparent border-none outline-none resize-none bg-slate-300"
+        class="
+          w-full h-96 p-2 bg-transparent border-none outline-none resize-none
+          text-3xl font-bold placeholder:text-sm placeholder:font-normal"
         >
         </textarea>
       </div>
       
     </section>
   </main>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>
