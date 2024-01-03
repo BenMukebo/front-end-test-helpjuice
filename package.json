@@ -1,0 +1,24 @@
+{
+  "name": "front-end-test-helpjuice",
+  "version": "1.0.0",
+  "description": "Helpjuice Front-End developer test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "BenMukebo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenMukebo/front-end-test-helpjuice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BenMukebo/front-end-test-helpjuice/issues"
+  },
+  "homepage": "https://github.com/BenMukebo/front-end-test-helpjuice#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
