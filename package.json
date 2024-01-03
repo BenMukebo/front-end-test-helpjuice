@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BenMukebo/front-end-test-helpjuice/issues"
   },
-  "homepage": "https://github.com/BenMukebo/front-end-test-helpjuice#readme"
+  "homepage": "https://github.com/BenMukebo/front-end-test-helpjuice#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
 }
