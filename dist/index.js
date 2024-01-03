@@ -1,7 +1,5 @@
 const divContainer = document.querySelector(".h1-div-container");
-console.log("div is: ", divContainer);
 const editorInput = document.getElementById("editor-input");
-console.log("editorInput is: ", editorInput);
 
 editorInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
@@ -10,7 +8,7 @@ editorInput.addEventListener("keyup", (e) => {
 
     if (value !== "") {
       const containerDiv = document.createElement("div");
-      containerDiv.className = "flex items-center gap-3 my-4";
+      containerDiv.className = "flex items-center gap-3 my-1";
 
       const burgerSvg = document.createElement("div");
       burgerSvg.className = "w-5 -translate-y-1.5";
@@ -22,7 +20,27 @@ editorInput.addEventListener("keyup", (e) => {
 
       const h1 = document.createElement("h1");
       h1.className = "text-3xl font-bold capitalize";
+      h1.contentEditable = true; // Make the h1 editable
+      h1.style.border = "none"; // Remove border
+      h1.style.outline = "none"; // Remove outline
       h1.innerText = value;
+
+      h1.addEventListener("keydown", (e) => {
+        const value = e.target.innerText.trim();
+        if (e.key === "Enter") {
+          e.preventDefault();
+          // Move the cursor to the end of the line
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(e.target);
+          range.collapse(false);
+          selection.removeAllRanges();
+          selection.addRange(range);
+      
+          // Focus on the editorInput
+          editorInput.focus();
+        }
+      });
 
       containerDiv.appendChild(burgerSvg);
       containerDiv.appendChild(h1);
@@ -32,3 +50,4 @@ editorInput.addEventListener("keyup", (e) => {
     }
   }
 });
+
