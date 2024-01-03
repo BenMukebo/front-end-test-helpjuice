@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './public/**/*.{html,js}'
-  ],
+  content: ["./dist/*.{html,js}"],
   theme: {
     screens: {
       xm: "375px",
@@ -18,6 +16,9 @@ module.exports = {
         'secondary': '#3565a9',
         'text-color': '#4d5562',
         'input-color': '#9da3ae',
+      },
+      opacity: {
+        '64': '.64',
       },
     },
   },
